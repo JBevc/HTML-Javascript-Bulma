@@ -1,0 +1,25 @@
+.navbar {
+  background-color: rgb(177, 225, 227);
+}
+
+.box {
+  margin: 1%;
+  background-color: rgb(177, 225, 227);
+}
+
+.navbar-item {
+  margin: 2%;
+}
+
+.margin {
+  margin: 2%;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.tag {
+  width: 70px;
+  height: 10px;
+}

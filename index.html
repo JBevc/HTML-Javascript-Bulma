@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://trello.com/"> 
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Trello_logo.svg/1200px-Trello_logo.svg.png" alt="Logo">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Workspaces
+          </a>
+    
+          <a class="navbar-item">
+            Recent
+          </a>
+          <a class="navbar-item">
+            Starred
+          </a>
+          <a class="navbar-item">
+            Templates
+          </a>
+          <button class="navbar-item button"> Agregar tarea </button>
+          
+        </div>
+    </nav>
+    <div class="margin">
+      <p class="title is-1"> Gestor de Tareas</p>
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
+        ">
+          <div class="box task">
+            <p class="title is-3"> Backlog </p>
+            <div class="card">
+              <div class="media-content">
+                <span class="tag is-danger"></span>
+                <p class="title is-6"> Task 1 </p>
+              </div>
+              <div class="content">
+                <p> hola </p>
+              </div>
+            </div>
+            <button class="button"> + Add a card </button>
+          </div>
+        </div>
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
+        ">
+          <div class="box task">
+            <p class="title is-3"> To do </p>
+          </div>
+          
+        </div>
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
+        ">
+          <div class="box task">
+            <p class="title is-3"> In progress  </p>
+          </div>
+        </div>
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
+        ">
+          <div class="box task">
+            <p class="title is-3"> Blocked   </p>
+          </div>
+        </div>
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
+        ">
+          <div class="box task">
+            <p class="title is-3"> Done  </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
