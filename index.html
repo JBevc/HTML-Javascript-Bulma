@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Gestor de tareas</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     
@@ -45,48 +45,47 @@
           
         </div>
     </nav>
+
     <div class="margin">
       <p class="title is-1"> Gestor de Tareas</p>
       <div class="columns is-mobile is-multiline">
-        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
-        ">
-          <div class="box task">
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile">
+          <div class="box task" id="backlog">
             <p class="title is-3"> Backlog </p>
-            <div class="card">
+            <div class="card cardTask js-modal-trigger" data-target="modal-js-example">
               <div class="media-content">
-                <span class="tag is-danger"></span>
-                <p class="title is-6"> Task 1 </p>
+                <span class="tag is-danger"> </span>
+                <p class="title is-6"> Título </p>
               </div>
               <div class="content">
-                <p> hola </p>
+                <p> descripcion </p>
               </div>
-            </div>
-            <button class="button"> + Add a card </button>
+            </div> 
+            <button class="button is-ghost buttonBox has-text-grey js-modal-trigger" data-target="modal-js-example"> + Add a card </button>
           </div>
         </div>
-        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
-        ">
-          <div class="box task">
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile">
+          <div class="box task" id="to do">
             <p class="title is-3"> To do </p>
+            <button class="button is-ghost buttonBox has-text-grey js-modal-trigger" data-target="modal-js-example"> + Add a card </button>
           </div>
-          
         </div>
-        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
-        ">
-          <div class="box task">
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile">
+          <div class="box task" id="in progress">
             <p class="title is-3"> In progress  </p>
+            <button class="button is-ghost buttonBox has-text-grey	js-modal-trigger" data-target="modal-js-example"> + Add a card </button>
           </div>
         </div>
-        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
-        ">
-          <div class="box task">
-            <p class="title is-3"> Blocked   </p>
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile">
+          <div class="box task" id="blocked">
+            <p class="title is-3"> Blocked </p>
+            <button class="button is-ghost buttonBox has-text-grey	js-modal-trigger" data-target="modal-js-example"> + Add a card </button>
           </div>
         </div>
-        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile
-        ">
-          <div class="box task">
+        <div class="column is-one-fifth-desktop is-one-third-tablet is-full-mobile">
+          <div class="box task" id="done">
             <p class="title is-3"> Done  </p>
+            <button class="button is-ghost buttonBox has-text-grey js-modal-trigger" data-target="modal-js-example"> + Add a card </button>
           </div>
         </div>
       </div>
@@ -97,65 +96,87 @@
         <div class="card">
           <div class="card-content">
             <p class="title"> Nueva Tarea </p>
-
             <div class="columns">
               <div class="column">
-                <div class="field">
-                  <label class="label"> Título </label>
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Ingrese el título de la tarea">
+                <div class="box">
+                  <div class="field">
+                    <label class="label"> Título </label>
+                    <div class="control">
+                      <input class="input" id="titulo" type="text" placeholder="Ingrese el título de la tarea">
+                    </div>
                   </div>
                 </div>
-
-                <div class="select field">
+                <div class="box">
                   <label class="label"> Asignado </label>
-                  <select>
-                    <option>Opción 1</option>
-                    <option>Opción 2</option>
-                    <option>Opción 3</option>
-                  </select>
+                  <div class="select">
+                    <select id="asignado">
+                      <option>Opción 1</option>
+                      <option>Opción 2</option>
+                      <option>Opción 3</option>
+                    </select>
+                  </div>
                 </div>
-            
-                <div class="select field">
+                <div class="box">
                   <label class="label"> Estado </label>
-                  <select>
-                    <option>Backlog</option>
-                    <option>To do</option>
-                    <option>In Progress</option>
-                    <option>Blocked</option>
-                    <option>Done</option>
-                  </select>
+                  <div class="select">
+                    <select id="estado">
+                      <option>Backlog</option>
+                      <option>To do</option>
+                      <option>In Progress</option>
+                      <option>Blocked</option>
+                      <option>Done</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <div class="column">
-                <div class="field">
-                  <label class="label"> Descripción </label>
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Describa brevemente su tarea...">
+                <div class="box">
+                  <div class="field">
+                    <label class="label"> Descripción </label>
+                    <div class="control">
+                      <input class="input" id="descripcion" type="text" placeholder="Describa su tarea...">
+                    </div>
                   </div>
                 </div>
-                
-                <div class="select field">
+                <div class="box">
                   <label class="label"> Prioridad </label>
-                  <select>
-                    <option>Alta</option>
-                    <option>Media</option>
-                    <option>Baja</option>
-                  </select>
+                  <div class="select"">
+                    <select id="prioridad">
+                      <option>Alta</option>
+                      <option>Media</option>
+                      <option>Baja</option>
+                    </select>
+                  </div>
                 </div>
-
-                <div class="field">
-                  <label class="label"> Fecha límite </label>
-                  <div class="control">
-                    <input class="input" type="date" placeholder="Ingrese una fecha">
+                <div class="box">
+                  <div class="field">
+                    <label class="label"> Fecha límite </label>
+                    <div class="control">
+                      <input class="input" id = "fechaLimite" type="date" placeholder="Ingrese una fecha">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <footer class="card-footer">
-            <p class="card-footer-item"> cancelar </p>
-            <p class="card-footer-item"> aceptar </p>
+            <p class="card-footer-item button is-ghost has-text-grey"> cancelar </p>
+            <p class="card-footer-item button is-ghost has-text-grey" id="addTaskButton"> aceptar </p>
+          </footer>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div class="modal" id="taskModal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">Editar tarea </p>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item button is-ghost has-text-grey"> cancelar </p>
+            <p class="card-footer-item button is-ghost has-text-grey"> aceptar </p>
           </footer>
         </div>
       </div>
