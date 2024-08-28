@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     
@@ -40,7 +41,7 @@
           <a class="navbar-item">
             Templates
           </a>
-          <button class="navbar-item button"> Agregar tarea </button>
+          <button class="navbar-item button js-modal-trigger" data-target="modal-js-example"> Agregar tarea </button>
           
         </div>
     </nav>
@@ -89,6 +90,76 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="card">
+          <div class="card-content">
+            <p class="title"> Nueva Tarea </p>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label"> Título </label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Ingrese el título de la tarea">
+                  </div>
+                </div>
+
+                <div class="select field">
+                  <label class="label"> Asignado </label>
+                  <select>
+                    <option>Opción 1</option>
+                    <option>Opción 2</option>
+                    <option>Opción 3</option>
+                  </select>
+                </div>
+            
+                <div class="select field">
+                  <label class="label"> Estado </label>
+                  <select>
+                    <option>Backlog</option>
+                    <option>To do</option>
+                    <option>In Progress</option>
+                    <option>Blocked</option>
+                    <option>Done</option>
+                  </select>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <label class="label"> Descripción </label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Describa brevemente su tarea...">
+                  </div>
+                </div>
+                
+                <div class="select field">
+                  <label class="label"> Prioridad </label>
+                  <select>
+                    <option>Alta</option>
+                    <option>Media</option>
+                    <option>Baja</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label class="label"> Fecha límite </label>
+                  <div class="control">
+                    <input class="input" type="date" placeholder="Ingrese una fecha">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <p class="card-footer-item"> cancelar </p>
+            <p class="card-footer-item"> aceptar </p>
+          </footer>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </body>
 </html>
