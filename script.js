@@ -62,14 +62,14 @@ function addTaskHandler() {
   };
   tasks.push(tareaNueva);
   createTaskComponent(tareaNueva);
+  document.querySelectorAll("input").placeholder = "hola";
 }
-// para resetear el texto del form
-//document.querySelector(".main__form").reset();
 
 const aceptar = document.getElementById("addTaskButton");
 aceptar.addEventListener("click", () => {
   addTaskHandler();
   loadModalEvents();
+  closeAllModals();
 });
 
 function loadModalEvents() {
@@ -116,6 +116,15 @@ function loadModalEvents() {
     if (event.key === "Escape") {
       closeAllModals();
     }
+  });
+}
+
+function closeAllModals() {
+  function closeModal($el) {
+    $el.classList.remove("is-active");
+  }
+  (document.querySelectorAll(".modal") || []).forEach(($modal) => {
+    closeModal($modal);
   });
 }
 
