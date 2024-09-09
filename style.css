@@ -1,10 +1,10 @@
 .navbar {
-  background-color: rgb(177, 225, 227);
+  background-color: rgb(202, 233, 255);
 }
 
 .box {
   margin: 1%;
-  background-color: rgb(177, 225, 227);
+  background-color: rgb(202, 233, 255);
 }
 
 .navbar-item {
@@ -41,5 +41,5 @@
 }
 
 .cardTask:hover {
-  box-shadow: 0 0 15px 5px rgb(26, 152, 255);
+  box-shadow: 0 0 0px 3px rgb(26, 152, 255);
 }

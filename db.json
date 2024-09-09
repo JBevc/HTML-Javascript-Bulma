@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": "c971",
+      "estadoTask": "In Progress",
+      "descripcionTask": "Una descripcion...",
+      "tituloTask": "Tarea 1",
+      "asignadoTask": "Opción 1",
+      "prioridadTask": "Baja",
+      "tagColor": "is-success",
+      "fechaLimiteTask": "2024-08-28"
+    },
+    {
+      "id": "f669",
+      "estadoTask": "To do",
+      "descripcionTask": "Otra descripcion...",
+      "tituloTask": "Tarea 2",
+      "asignadoTask": "Opción 1",
+      "prioridadTask": "Media",
+      "tagColor": "is-warning",
+      "fechaLimiteTask": "2024-09-18"
+    }
+  ]
+}
